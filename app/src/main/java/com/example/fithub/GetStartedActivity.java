@@ -14,6 +14,7 @@ public class GetStartedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_started);
 
+
         Button boutonGetStarted=findViewById(R.id.boutonGetStarted);
         boutonGetStarted.setOnClickListener(view -> {
             Intent intent=new Intent(getApplicationContext(),ChooseYourGoalActivity.class);

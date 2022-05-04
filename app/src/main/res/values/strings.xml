@@ -9,4 +9,7 @@
     <string name="athlete">Athlete</string>
     <string name="hero">Hero</string>
     <string name="bodybuilder">Bodybuilder</string>
+    <string name="ectomorph">ECTOMORPH</string>
+    <string name="mesomorph">MESOMORPH</string>
+    <string name="endomorph">ENDOMORPH</string>
 </resources>

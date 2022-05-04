@@ -120,10 +120,10 @@ public class DbHandler extends SQLiteOpenHelper {
         exo.setId(db.insert(TABLEEXERCICE,null,contentValues));
         db.close();
     }
-    public void addSys(){
-        ContentValues contentValues=new ContentValues();
-        contentValues.put(COL_SYS_PREMIEREFOIS,0);
+    public void addSys(int i){
         SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+        contentValues.put(COL_SYS_PREMIEREFOIS,i);
         db.insert(TABLESYS,null,contentValues);
         db.close();
     }
@@ -136,7 +136,8 @@ public class DbHandler extends SQLiteOpenHelper {
     }
     public int getSys(){
         SQLiteDatabase db=this.getReadableDatabase();
-        Cursor cursor=db.rawQuery("SELECT * FROM "+TABLESYS,null);
+        Cursor cursor=db.rawQuery("SELECT * from "+TABLESYS,null);
+        cursor.moveToNext();
         int i =cursor.getInt(0);
         cursor.close();
         db.close();
@@ -147,8 +148,8 @@ public class DbHandler extends SQLiteOpenHelper {
     public User getUser(){
         SQLiteDatabase db=this.getReadableDatabase();
         User user=new User();
-        Cursor cursor=db.rawQuery("SELECT * FROM "+TABLEUSER+" WHERE "+COL_USER_ID+" =? ",new String[]{"1"});
-
+        Cursor cursor=db.rawQuery("SELECT * from "+TABLEUSER+" WHERE "+COL_USER_ID+" =? ",new String[]{"1"});
+        cursor.moveToNext();
 
         user.setId(cursor.getLong(0));
         user.setName(cursor.getString(1));

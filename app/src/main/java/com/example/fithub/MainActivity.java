@@ -15,18 +15,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        int premiereFois;
+
         DbHandler db;
         if(doesDatabaseExist(this,DbHandler.DATABASE)) {
             db = new DbHandler(this, null);
-            db.addSys();
         }
         else{
             db = new DbHandler(this, null);
-            db.addSys();
+            db.addSys(0);
         }
 
-        premiereFois= db.getSys();
+        int premiereFois= db.getSys();
 
 
 
