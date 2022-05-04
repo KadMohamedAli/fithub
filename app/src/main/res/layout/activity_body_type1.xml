@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BodyTypeActivity1"
+    android:background="@color/noir_fonce">
+
+    <Button
+        android:layout_width="290dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="40dp"
+        android:text="@string/ectomorph"
+        android:gravity="start|top"
+        android:fontFamily="@font/ms_reference_sans_serif"
+        android:textSize="22sp"
+        android:backgroundTint="@color/noir_moins_fonce"
+        android:id="@+id/ectomorph"
+        />
+    <Button
+        android:layout_width="290dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/ectomorph"
+        app:layout_constraintStart_toStartOf="@id/ectomorph"
+        android:layout_marginTop="10dp"
+        android:text="@string/mesomorph"
+        android:gravity="start|top"
+        android:fontFamily="@font/ms_reference_sans_serif"
+        android:textSize="22sp"
+        android:backgroundTint="@color/noir_moins_fonce"
+        android:id="@+id/mesomorph"
+        />
+    <Button
+        android:layout_width="290dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/mesomorph"
+        app:layout_constraintStart_toStartOf="@id/mesomorph"
+        android:layout_marginTop="10dp"
+        android:text="@string/endomorph"
+        android:gravity="start|top"
+        android:fontFamily="@font/ms_reference_sans_serif"
+        android:textSize="22sp"
+        android:backgroundTint="@color/noir_moins_fonce"
+        android:id="@+id/endomorph"
+        />
+
+    <ImageButton
+        android:layout_width="65dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/endomorph"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/infoImageBoutton"
+        android:src="@drawable/ic_baseline_info_24"
+        android:scaleType="fitXY"
+        android:backgroundTint="@color/noir_fonce"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

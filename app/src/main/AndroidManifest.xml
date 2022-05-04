@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fithub">
         <activity
+            android:name=".BodyTypeActivity1"
+            android:exported="false" />
+        <activity
             android:name=".afficheSwalahActivity"
             android:exported="false" />
         <activity
