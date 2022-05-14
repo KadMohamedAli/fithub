@@ -10,58 +10,52 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class BodyTypeActivity1 extends AppCompatActivity {
+public class BodyTypeActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_body_type1);
+        setContentView(R.layout.activity_body_type2);
 
         DbHandler db=new DbHandler(this,null);
 
-        Button ectomorphBoutton=findViewById(R.id.ectomorph);
-        Button mesomorphBoutton=findViewById(R.id.mesomorph);
-        Button endomorphBoutton=findViewById(R.id.endomorph);
-        ImageButton infoImageBoutton=findViewById(R.id.infoImageBoutton);
+        Button option0=findViewById(R.id.body_type2_option0);
+        Button option1=findViewById(R.id.body_type2_option1);
+        Button option2=findViewById(R.id.body_type2_option2);
 
-        Intent intent=new Intent(getApplicationContext(),BodyTypeActivity2.class);
-        ectomorphBoutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SQLiteDatabase database=db.getWritableDatabase();
-                ContentValues contentValues=new ContentValues();
-                contentValues.put(DbHandler.COL_USER_BODYTYPE1,0);
-                database.insert(DbHandler.TABLEUSER,null,contentValues);
-                database.close();
-                startActivity(intent);
-            }
-        });
-        mesomorphBoutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SQLiteDatabase database=db.getWritableDatabase();
-                ContentValues contentValues=new ContentValues();
-                contentValues.put(DbHandler.COL_USER_BODYTYPE1,1);
-                database.insert(DbHandler.TABLEUSER,null,contentValues);
-                database.close();
-                startActivity(intent);
-            }
-        });
-        endomorphBoutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SQLiteDatabase database=db.getWritableDatabase();
-                ContentValues contentValues=new ContentValues();
-                contentValues.put(DbHandler.COL_USER_BODYTYPE1,2);
-                database.insert(DbHandler.TABLEUSER,null,contentValues);
-                database.close();
-                startActivity(intent);
-            }
-        });
-        infoImageBoutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
+        Intent intent=new Intent(getApplicationContext(),BodyFatActivity.class);
+        option0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SQLiteDatabase database=db.getWritableDatabase();
+                ContentValues contentValues=new ContentValues();
+                contentValues.put(DbHandler.COL_USER_BODYTYPE2,0);
+                database.insert(DbHandler.TABLEUSER,null,contentValues);
+                database.close();
+                startActivity(intent);
+            }
+        });
+        option1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SQLiteDatabase database=db.getWritableDatabase();
+                ContentValues contentValues=new ContentValues();
+                contentValues.put(DbHandler.COL_USER_BODYTYPE2,1);
+                database.insert(DbHandler.TABLEUSER,null,contentValues);
+                database.close();
+                startActivity(intent);
+            }
+        });
+        option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SQLiteDatabase database=db.getWritableDatabase();
+                ContentValues contentValues=new ContentValues();
+                contentValues.put(DbHandler.COL_USER_BODYTYPE2,2);
+                database.insert(DbHandler.TABLEUSER,null,contentValues);
+                database.close();
+                startActivity(intent);
             }
         });
     }

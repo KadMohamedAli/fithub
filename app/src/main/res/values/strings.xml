@@ -12,4 +12,12 @@
     <string name="ectomorph">ECTOMORPH</string>
     <string name="mesomorph">MESOMORPH</string>
     <string name="endomorph">ENDOMORPH</string>
+    <string name="skinny_fat">SKINNY FAT</string>
+    <string name="strong_fat">STRONG FAT</string>
+    <string name="skinny_and_slim">SKINNY AND SLIM</string>
+    <string name="continue1">CONTINUE</string>
+    <string name="weak_chest">WEAK CHEST</string>
+    <string name="slim_legs">SLIM LEGS</string>
+    <string name="slim_arms">SLIM ARMS</string>
+    <string name="beer_belly">BEER BELLY</string>
 </resources>

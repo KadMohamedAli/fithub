@@ -148,6 +148,7 @@ public class DbHandler extends SQLiteOpenHelper {
     public User getUser(){
         SQLiteDatabase db=this.getReadableDatabase();
         User user=new User();
+
         Cursor cursor=db.rawQuery("SELECT * from "+TABLEUSER+" WHERE "+COL_USER_ID+" =? ",new String[]{"1"});
         cursor.moveToNext();
 
