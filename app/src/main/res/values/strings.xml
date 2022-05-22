@@ -20,4 +20,14 @@
     <string name="slim_legs">SLIM LEGS</string>
     <string name="slim_arms">SLIM ARMS</string>
     <string name="beer_belly">BEER BELLY</string>
+    <string name="your_name">Your name</string>
+    <string name="heart_disease">HEART DISEASE</string>
+    <string name="severe_scoliosis">SEVERE SCOLIOSIS</string>
+    <string name="spinal_damage">SPINAL DAMAGE</string>
+    <string name="benign_or_malignant_tumor">BENIGN OR MALIGNANT TUMOR</string>
+    <string name="hypertention">HYPERTENTION</string>
+    <string name="suggested_calories">SUGGESTED CALORIES</string>
+    <string name="carbs">CARBS</string>
+    <string name="fat">FAT</string>
+    <string name="protein">PROTEIN</string>
 </resources>

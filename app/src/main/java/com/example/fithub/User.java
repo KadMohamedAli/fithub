@@ -15,7 +15,7 @@ public class User {
     private int targetWieght;
     private int fitnessLevel;
     private Boolean[] healthProblem;
-    private int BMI;
+    private float BMI;
     private int dailyCalorie;
     private int dailyWater;
     private int suggesetedCalorie;
@@ -35,7 +35,7 @@ public class User {
 
     }
 
-    public User(long id, String name, Date birthday, int height, int weight, int bodyGoalOption1, int bodyGoalOption2, int bodyType1, int bodyType2, int bodyFat, Boolean[] problemeArea, int targetWieght, int fitnessLevel, Boolean[] healthProblem, int BMI, int dailyCalorie, int dailyWater, int suggesetedCalorie, int carbs, int fat, int protein, String goal, Boolean[] interestedSport, int numberPushUp, int numberPullUp, int workoutTime) {
+    public User(long id, String name, Date birthday, int height, int weight, int bodyGoalOption1, int bodyGoalOption2, int bodyType1, int bodyType2, int bodyFat, Boolean[] problemeArea, int targetWieght, int fitnessLevel, Boolean[] healthProblem, float BMI, int dailyCalorie, int dailyWater, int suggesetedCalorie, int carbs, int fat, int protein, String goal, Boolean[] interestedSport, int numberPushUp, int numberPullUp, int workoutTime) {
         this.id = id;
         this.name = name;
         this.birthday = birthday;
@@ -64,18 +64,18 @@ public class User {
         this.workoutTime = workoutTime;
     }
     public static String boolToString(Boolean[] x){
-        String string=new String("");
+        StringBuilder string= new StringBuilder(new String(""));
         for(int i=0;i<x.length;i++){
             if(!x[i])
-                string.concat("0");
+                string.append("0");
             else
-                string.concat("1");
+                string.append("1");
         }
-        return string;
+        return string.toString();
     }
 
     public static Boolean[] stringToBool(String x){
-        Boolean bool[]=new Boolean[x.length()];
+        Boolean[] bool =new Boolean[x.length()];
         for(int i=0;i<x.length();i++){
             if(x.charAt(i)=='0')
                 bool[i]=false;
@@ -197,11 +197,11 @@ public class User {
         this.healthProblem = healthProblem;
     }
 
-    public int getBMI() {
+    public float getBMI() {
         return BMI;
     }
 
-    public void setBMI(int BMI) {
+    public void setBMI(float BMI) {
         this.BMI = BMI;
     }
 

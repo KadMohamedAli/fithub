@@ -15,7 +15,7 @@ public class DbHandler extends SQLiteOpenHelper {
     public static final String TABLEEXERCICE="exercice";
     public static final String TABLESYS="sys";
 
-    public static final String COL_USER_ID="id";
+    public static final String COL_USER_ID="_id";
     public static final String COL_USER_NAME="name";
     public static final String COL_USER_BIRTHDAY="birthday";
     public static final String COL_USER_HEIGHT="height";
@@ -58,7 +58,7 @@ public class DbHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String requete1="CREATE TABLE "+TABLEUSER+
-                " ( "+COL_USER_ID+" INTEGER, "+
+                " ( "+COL_USER_ID+" INTEGER PRIMARY KEY, "+
                 COL_USER_NAME+" TEXT, "+
                 COL_USER_BIRTHDAY+" TEXT, "+
                 COL_USER_HEIGHT+" INTEGER, "+
@@ -72,7 +72,7 @@ public class DbHandler extends SQLiteOpenHelper {
                 COL_USER_TARGETWEIGHT+" INTEGER, "+
                 COL_USER_FITNESSLEVEL+" INTEGER, "+
                 COL_USER_HEALTHPROBLEM+" TEXT, "+
-                COL_USER_BMI+" INTEGER, "+
+                COL_USER_BMI+" REAL, "+
                 COL_USER_DAILYCALORIE+" INTEGER, "+
                 COL_USER_DAILYWATER+" INTEGER, "+
                 COL_USER_SUGGESTEDCALORIE+" INTEGER, "+
@@ -107,6 +107,11 @@ public class DbHandler extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLEEXERCICE);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLESYS);
         onCreate(sqLiteDatabase);
+    }
+    public void deleteAllUser(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM "+TABLEUSER); //delete all rows in a table
+        db.close();
     }
 
     public void addExercice(Exercice exo){
@@ -166,7 +171,7 @@ public class DbHandler extends SQLiteOpenHelper {
         user.setTargetWieght(cursor.getInt(11));
         user.setFitnessLevel(cursor.getInt(12));
         user.setHealthProblem(User.stringToBool(cursor.getString(13)));
-        user.setBMI(cursor.getInt(14));
+        user.setBMI(cursor.getFloat(14));
         user.setDailyCalorie(cursor.getInt(15));
         user.setDailyWater(cursor.getInt(16));
         user.setSuggesetedCalorie(cursor.getInt(17));

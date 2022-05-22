@@ -31,9 +31,11 @@ public class BodyTypeActivity2 extends AppCompatActivity {
                 SQLiteDatabase database=db.getWritableDatabase();
                 ContentValues contentValues=new ContentValues();
                 contentValues.put(DbHandler.COL_USER_BODYTYPE2,0);
-                database.insert(DbHandler.TABLEUSER,null,contentValues);
+                database.update(DbHandler.TABLEUSER,contentValues,DbHandler.COL_USER_ID+" = ?",new String[]{"1"});
                 database.close();
+                db.close();
                 startActivity(intent);
+                finish();
             }
         });
         option1.setOnClickListener(new View.OnClickListener() {
@@ -42,9 +44,11 @@ public class BodyTypeActivity2 extends AppCompatActivity {
                 SQLiteDatabase database=db.getWritableDatabase();
                 ContentValues contentValues=new ContentValues();
                 contentValues.put(DbHandler.COL_USER_BODYTYPE2,1);
-                database.insert(DbHandler.TABLEUSER,null,contentValues);
+                database.update(DbHandler.TABLEUSER,contentValues,DbHandler.COL_USER_ID+" = ?",new String[]{"1"});
                 database.close();
+                db.close();
                 startActivity(intent);
+                finish();
             }
         });
         option2.setOnClickListener(new View.OnClickListener() {
@@ -53,9 +57,11 @@ public class BodyTypeActivity2 extends AppCompatActivity {
                 SQLiteDatabase database=db.getWritableDatabase();
                 ContentValues contentValues=new ContentValues();
                 contentValues.put(DbHandler.COL_USER_BODYTYPE2,2);
-                database.insert(DbHandler.TABLEUSER,null,contentValues);
+                database.update(DbHandler.TABLEUSER,contentValues,DbHandler.COL_USER_ID+" = ?",new String[]{"1"});
                 database.close();
+                db.close();
                 startActivity(intent);
+                finish();
             }
         });
     }

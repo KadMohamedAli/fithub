@@ -3,6 +3,7 @@ package com.example.fithub;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
@@ -31,6 +32,7 @@ public class ProblemAreaActivity extends AppCompatActivity {
         Button beerBelly=findViewById(R.id.beerBellyButton);
         Button continuer=findViewById(R.id.continuerButtonProblemArea);
 
+        Intent intent=new Intent(getApplicationContext(),PersonnalInformationActivity.class);
         weakChest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,9 +92,12 @@ public class ProblemAreaActivity extends AppCompatActivity {
 
                 SQLiteDatabase database=db.getWritableDatabase();
                 ContentValues contentValues=new ContentValues();
-                contentValues.put(DbHandler.COL_USER_BODYFAT,User.boolToString(problemeArea));
-                database.insert(DbHandler.TABLEUSER,null,contentValues);
+                contentValues.put(DbHandler.COL_USER_PROBLEMAREA,User.boolToString(problemeArea));
+                database.update(DbHandler.TABLEUSER,contentValues,DbHandler.COL_USER_ID+" = ?",new String[]{"1"});
                 database.close();
+                db.close();
+                startActivity(intent);
+                finish();
             }
         });
     }

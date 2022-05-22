@@ -17,23 +17,24 @@ public class ChooseYourGoalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choose_your_goal);
 
         DbHandler db=new DbHandler(this,null);
-
         Button loseWeightBoutton=findViewById(R.id.athlete);
         Button getShreddedBoutton=findViewById(R.id.hero);
         Button gainMuscleMassBoutton=findViewById(R.id.bodybuilder);
 
         Intent intent=new Intent(getApplicationContext(),ChooseYourGoalActivity2.class);
-
+        int id=1;
         loseWeightBoutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SQLiteDatabase database=db.getWritableDatabase();
                 ContentValues contentValues=new ContentValues();
+                contentValues.put(DbHandler.COL_USER_ID,id);
                 contentValues.put(DbHandler.COL_USER_BODYGOALOPTION1,0);
                 database.insert(DbHandler.TABLEUSER,null,contentValues);
                 database.close();
-
+                db.close();
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -42,11 +43,14 @@ public class ChooseYourGoalActivity extends AppCompatActivity {
             public void onClick(View view) {
                 SQLiteDatabase database=db.getWritableDatabase();
                 ContentValues contentValues=new ContentValues();
+                contentValues.put(DbHandler.COL_USER_ID,id);
                 contentValues.put(DbHandler.COL_USER_BODYGOALOPTION1,1);
                 database.insert(DbHandler.TABLEUSER,null,contentValues);
                 database.close();
+                db.close();
 
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -55,11 +59,14 @@ public class ChooseYourGoalActivity extends AppCompatActivity {
             public void onClick(View view) {
                 SQLiteDatabase database=db.getWritableDatabase();
                 ContentValues contentValues=new ContentValues();
+                contentValues.put(DbHandler.COL_USER_ID,id);
                 contentValues.put(DbHandler.COL_USER_BODYGOALOPTION1,2);
                 database.insert(DbHandler.TABLEUSER,null,contentValues);
                 database.close();
 
+                db.close();
                 startActivity(intent);
+                finish();
             }
         });
 

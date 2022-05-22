@@ -31,10 +31,12 @@ public class BodyFatActivity extends AppCompatActivity {
             public void onClick(View view) {
                 SQLiteDatabase database=db.getWritableDatabase();
                 ContentValues contentValues=new ContentValues();
-                contentValues.put(DbHandler.COL_USER_BODYFAT,slider.getValue());
-                database.insert(DbHandler.TABLEUSER,null,contentValues);
+                contentValues.put(DbHandler.COL_USER_BODYFAT,String.valueOf(slider.getValue()));
+                database.update(DbHandler.TABLEUSER,contentValues,DbHandler.COL_USER_ID+" = ?",new String[]{"1"});
                 database.close();
+                db.close();
                 startActivity(intent);
+                finish();
             }
         });
     }

@@ -15,34 +15,32 @@ public class Date {
     }
 
     public static String dateToString(Date x){
-        String string=new String("");
-        string.concat(String.valueOf(x.getAn())+"-"+String.valueOf(x.getMois())+"-"+String.valueOf(x.getJour())+"-");
-        return string;
+        return new String(String.valueOf(x.getAn())+"-"+String.valueOf(x.getMois())+"-"+String.valueOf(x.getJour())+"-");
     }
 
     public static Date stringToDate(String x){
         Date date=new Date();
-        String jour=new String("");
-        String mois=new String("");
-        String an=new String("");
+        StringBuilder jour= new StringBuilder(new String(""));
+        StringBuilder mois= new StringBuilder(new String(""));
+        StringBuilder an= new StringBuilder(new String(""));
         int i=0;
         while(x.charAt(i)!='-'){
-            an.concat(String.valueOf(x.charAt(i)));
+            an.append(String.valueOf(x.charAt(i)));
             i=+1;
         }
         i=+1;
         while(x.charAt(i)!='-'){
-            mois.concat(String.valueOf(x.charAt(i)));
+            mois.append(String.valueOf(x.charAt(i)));
             i=+1;
         }
         i=+1;
         while(x.charAt(i)!='-'){
-            jour.concat(String.valueOf(x.charAt(i)));
+            jour.append(String.valueOf(x.charAt(i)));
             i=+1;
         }
-        date.setAn(Integer.getInteger(an));
-        date.setMois(Integer.getInteger(mois));
-        date.setJour(Integer.getInteger(jour));
+        date.setAn(Integer.getInteger(an.toString()));
+        date.setMois(Integer.getInteger(mois.toString()));
+        date.setJour(Integer.getInteger(jour.toString()));
         return date;
     }
 

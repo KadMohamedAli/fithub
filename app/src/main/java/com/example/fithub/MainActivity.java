@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import java.io.File;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         DbHandler db;
         if(doesDatabaseExist(this,DbHandler.DATABASE)) {
             db = new DbHandler(this, null);
+            db.deleteAllUser();
         }
         else{
             db = new DbHandler(this, null);
