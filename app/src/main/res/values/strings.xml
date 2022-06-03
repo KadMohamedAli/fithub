@@ -25,4 +25,9 @@
     <string name="hero">Hero</string>
     <string name="continue_button">CONTINUE</string>
     <string name="bodybuilder">Bodybuilder</string>
+    <string name="units">Units</string>
+    <string name="feets_inches">ft, in</string>
+    <string name="centimeters">cm</string>
+    <string name="height_cm">Height (cm)</string>
+    <string name="cm">___cm</string>
 </resources>

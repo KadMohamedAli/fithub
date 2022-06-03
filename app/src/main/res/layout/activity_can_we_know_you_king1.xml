@@ -60,16 +60,18 @@
         </TextView>
 
         <EditText
-            android:id="@+id/birthDate"
+            android:id="@+id/birthdate_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/faded_white"
             android:hint="@string/dd_mm_yy"
             android:inputType="date"
+            android:minHeight="48dp"
+            android:padding="10sp"
             android:textColor="@color/white"
             android:textColorHint="@color/grey"
             android:textSize="15sp"
-            android:padding="10sp">
+            android:autofillHints="">
 
         </EditText>
 
@@ -107,16 +109,18 @@
         </TextView>
 
         <EditText
-            android:id="@+id/userName"
+            android:id="@+id/name_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/faded_white"
             android:hint="@string/name"
             android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10sp"
             android:textColor="@color/white"
             android:textColorHint="@color/grey"
             android:textSize="15sp"
-            android:padding="10sp">
+            android:autofillHints="">
 
         </EditText>
 
@@ -155,7 +159,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Units"
+                android:text="@string/units"
                 android:textSize="17sp"
                 android:textColor="@color/grey">
 
@@ -172,7 +176,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="ft, in"
+                    android:text="@string/feets_inches"
                     android:layout_marginEnd="10sp"
                     android:button="@android:color/transparent"
                     android:background="@drawable/units_radio_selector"
@@ -184,7 +188,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="cm"
+                    android:text="@string/centimeters"
                     android:layout_marginStart="10sp"
                     android:button="@android:color/transparent"
                     android:background="@drawable/units_radio_selector"
@@ -202,34 +206,38 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Height (cm)"
+            android:text="@string/height_cm"
             android:textSize="17sp"
             android:textColor="@color/white">
 
         </TextView>
 
         <EditText
-            android:id="@+id/height"
+            android:id="@+id/height_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:background="@color/faded_white"
-            android:hint="___cm"
+            android:hint="@string/cm"
             android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="10sp"
             android:textColor="@color/white"
             android:textColorHint="@color/grey"
-            android:textSize="15sp"
-            android:padding="10sp">
+            android:textSize="15sp">
 
         </EditText>
 
     </LinearLayout>
 
     <Button
+        android:id="@+id/continue_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:text="CONTINUE"
+        android:text="@string/continue_button"
+        android:layout_marginTop="10sp"
         android:padding="15sp">
-
     </Button>
+
 </LinearLayout>
