@@ -21,5 +21,12 @@ public class GetStartedActivity extends AppCompatActivity {
             finish();
         });
 
+        Button bouttonCalorieCalculator = findViewById(R.id.boutonCalorieCalculator);
+        bouttonCalorieCalculator.setOnClickListener(view -> {
+            Intent intent=new Intent(getApplicationContext(),CalorieCalculatorActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
     }
 }

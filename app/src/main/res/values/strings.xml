@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">fithub</string>
     <string name="get_started">GET STARTED</string>
+    <string name="can_we_know_you_king">CAN WE KNOW YOU KING</string>
+    <string name="calorie_calculator">CALORIE CALCULATOR</string>
     <string name="choose_your_goal">CHOOSE YOUR GOAL</string>
     <string name="lose_weight">Lose Weight</string>
     <string name="get_shredded">Get shredded</string>
@@ -8,5 +10,6 @@
     <string name="choose_the_body_you_want">CHOOSE THE BODY YOU WANT</string>
     <string name="athlete">Athlete</string>
     <string name="hero">Hero</string>
+    <string name="continue_button">CONTINUE</string>
     <string name="bodybuilder">Bodybuilder</string>
 </resources>
