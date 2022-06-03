@@ -3,6 +3,19 @@
     <string name="get_started">GET STARTED</string>
     <string name="can_we_know_you_king">CAN WE KNOW YOU KING</string>
     <string name="calorie_calculator">CALORIE CALCULATOR</string>
+
+    <string name="whats_your_date_of_birth">What\'s your date of birth?</string>
+    <string name="day_month_year">Day/Month/Year</string>
+    <string name="dd_mm_yy">DD/MM/YYYY</string>
+
+
+    <string name="what_should_we_call_you">What should we call you?</string>
+    <string name="your_name">Your Name</string>
+    <string name="name">Name</string>
+
+    <string name="whats_your_height">What\'s your height?</string>
+
+
     <string name="choose_your_goal">CHOOSE YOUR GOAL</string>
     <string name="lose_weight">Lose Weight</string>
     <string name="get_shredded">Get shredded</string>

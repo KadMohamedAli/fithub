@@ -1,6 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".CanWeKnowYouKingActivity1"
+    android:background="@color/noir_fonce"
+    android:orientation="vertical"
+    android:padding="15sp"
+    >
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:layout_marginBottom="40sp">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/can_we_know_you_king"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="240dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_for_layout"
+        android:orientation="vertical"
+        android:paddingHorizontal="35sp"
+        android:paddingVertical="20sp"
+        android:layout_marginBottom="10sp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/whats_your_date_of_birth"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="165dp"
+            android:layout_marginBottom="25sp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/day_month_year"
+            android:textSize="17sp"
+            android:textColor="@color/white">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/birthDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/faded_white"
+            android:hint="@string/dd_mm_yy"
+            android:inputType="date"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="15sp"
+            android:padding="10sp">
+
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_for_layout"
+        android:orientation="vertical"
+        android:paddingHorizontal="35sp"
+        android:paddingVertical="20sp"
+        android:layout_marginBottom="10sp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_should_we_call_you"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="165dp"
+            android:layout_marginBottom="25sp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_name"
+            android:textSize="17sp"
+            android:textColor="@color/white">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/faded_white"
+            android:hint="@string/name"
+            android:inputType="date"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="15sp"
+            android:padding="10sp">
+
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_for_layout"
+        android:orientation="vertical"
+        android:paddingHorizontal="35sp"
+        android:paddingVertical="20sp"
+        android:layout_marginBottom="10sp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/whats_your_height"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="165dp"
+            android:layout_marginBottom="25sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20sp"
+            >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Units"
+                android:textSize="17sp"
+                android:textColor="@color/grey">
+
+            </TextView>
+
+            <RadioGroup
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="ft, in"
+                    android:layout_marginEnd="10sp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/units_radio_selector"
+                    android:textColor="@color/white">
+                </RadioButton>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:layout_marginStart="10sp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/units_radio_selector"
+                    android:checked="true"
+                    android:textColor="@color/white">
+                </RadioButton>
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height (cm)"
+            android:textSize="17sp"
+            android:textColor="@color/white">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/faded_white"
+            android:hint="___cm"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="15sp"
+            android:padding="10sp">
+
+        </EditText>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="CONTINUE"
+        android:padding="15sp">
+
+    </Button>
+</LinearLayout>

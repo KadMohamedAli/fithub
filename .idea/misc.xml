@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/DeNouN/Study/Android/fithub app/app/src/main/res/drawable/edittext_outline.xml" value="0.1425" />
+        <entry key="..\:/DeNouN/Study/Android/fithub app/app/src/main/res/drawable/units_radio_normal.xml" value="0.1425" />
+        <entry key="..\:/DeNouN/Study/Android/fithub app/app/src/main/res/drawable/units_radio_selected.xml" value="0.1425" />
+        <entry key="..\:/DeNouN/Study/Android/fithub app/app/src/main/res/drawable/units_radio_selector.xml" value="0.1425" />
         <entry key="..\:/DeNouN/Study/Android/fithub app/app/src/main/res/layout/activity_calorie_calculator.xml" value="0.25" />
-        <entry key="..\:/DeNouN/Study/Android/fithub app/app/src/main/res/layout/activity_can_we_know_you_king1.xml" value="0.22" />
+        <entry key="..\:/DeNouN/Study/Android/fithub app/app/src/main/res/layout/activity_can_we_know_you_king1.xml" value="0.33" />
         <entry key="..\:/DeNouN/Study/Android/fithub app/app/src/main/res/layout/activity_choose_your_goal.xml" value="0.33" />
         <entry key="..\:/DeNouN/Study/Android/fithub app/app/src/main/res/layout/activity_choose_your_goal2.xml" value="0.33" />
         <entry key="..\:/DeNouN/Study/Android/fithub app/app/src/main/res/layout/activity_get_started.xml" value="0.25" />

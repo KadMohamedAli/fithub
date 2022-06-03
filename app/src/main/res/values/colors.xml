@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#C8C8C8</color>
+    <color name="background_for_layout">#33000000</color>
     <color name="faded_white">#0CFFFFFF</color>
     <color name="couleur1">#BBAACC</color>
     <color name="couleur2">#251E5A</color>
