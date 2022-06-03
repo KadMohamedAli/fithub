@@ -28,5 +28,12 @@ public class GetStartedActivity extends AppCompatActivity {
             finish();
         });
 
+        Button bouttonCanWeKnowYou = findViewById(R.id.bouttonCanWeKnowYou);
+        bouttonCanWeKnowYou.setOnClickListener(view -> {
+            Intent intent=new Intent(getApplicationContext(),CanWeKnowYouKingActivity1.class);
+            startActivity(intent);
+            finish();
+        });
+
     }
 }
