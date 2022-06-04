@@ -23,11 +23,46 @@
     <string name="choose_the_body_you_want">CHOOSE THE BODY YOU WANT</string>
     <string name="athlete">Athlete</string>
     <string name="hero">Hero</string>
-    <string name="continue_button">CONTINUE</string>
     <string name="bodybuilder">Bodybuilder</string>
+
+    <string name="continue_button">CONTINUE</string>
+
+
     <string name="units">Units</string>
     <string name="feets_inches">ft, in</string>
     <string name="centimeters">cm</string>
+    <string name="kilograms">kg</string>
+    <string name="pounds">lb</string>
+
     <string name="height_cm">Height (cm)</string>
-    <string name="cm">___cm</string>
+    <string name="height_ft">Height (ft)</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="weight_lb">Height (lb)</string>
+
+    <string name="___cm">___cm</string>
+    <string name="___ft">___cm</string>
+    <string name="___kg">___kg</string>
+    <string name="___lb">___kg</string>
+
+    <string name="target_weight_kg">Target weight (kg)</string>
+    <string name="target_weight_lb">Target weight (lb)</string>
+    <string name="current_weight_kg">Current weight (kg)</string>
+    <string name="current_weight_lb">Current weight (lb)</string>
+
+    <string name="choose_your_current_level_of_fitness_to_align_the_workout_plan_with">Choose your current level of fitness to align the workout plan with.</string>
+    <string name="what_s_your_level_of_fitness">What\'s your level of fitness?</string>
+
+    <string name="what_s_your_current_and_target_weight">What\'s your current and target weight?</string>
+    <string name="scroll_view_1">1</string>
+    <string name="scroll_view_10">10</string>
+    <string name="activity_level">Activity Level</string>
+    <string name="worst_shape">Worst shape</string>
+    <string name="i_m_on_fire">i\'m on fire</string>
+    <string name="heart_disease">Heart disease</string>
+    <string name="do_you_have_any_of_the_following_conditions">Do you have any of the following conditions?</string>
+    <string name="severe_scoliosis">Severe scoliosis</string>
+    <string name="spinal_damage">Spinal damage</string>
+    <string name="benign_or_malignant_tumor">Benign or malignant tumor</string>
+    <string name="hypertention">Hypertention</string>
+    <string name="none_of_the_above">None of the above</string>
 </resources>

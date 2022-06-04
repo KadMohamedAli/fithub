@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CalorieCalculatorActivity extends AppCompatActivity {
+public class CanWeKnowYouKingActivity3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calorie_calculator);
+        setContentView(R.layout.activity_can_we_know_you_king3);
     }
 }

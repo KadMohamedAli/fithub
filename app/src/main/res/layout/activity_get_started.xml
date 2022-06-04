@@ -24,7 +24,7 @@
         android:id="@+id/bouttonCanWeKnowYou"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="260dp"
+        android:layout_marginBottom="136dp"
         android:fontFamily="@font/ms_reference_sans_serif"
         android:text="Can we know you"
         android:textSize="17sp"
@@ -34,17 +34,5 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/boutonCalorieCalculator"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="156dp"
-        android:fontFamily="@font/ms_reference_sans_serif"
-        android:text="@string/calorie_calculator"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
