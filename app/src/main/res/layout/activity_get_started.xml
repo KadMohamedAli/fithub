@@ -26,7 +26,7 @@
         android:layout_height="60dp"
         android:layout_marginBottom="136dp"
         android:fontFamily="@font/ms_reference_sans_serif"
-        android:text="Can we know you"
+        android:text="@string/can_we_know_you_king"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
