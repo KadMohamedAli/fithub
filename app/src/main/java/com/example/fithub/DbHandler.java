@@ -152,6 +152,13 @@ public class DbHandler extends SQLiteOpenHelper {
         db.close();
         return i;
     }
+    public void setSys(int i){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+        contentValues.put(COL_SYS_PREMIEREFOIS,i);
+        db.update(DbHandler.TABLESYS,contentValues,DbHandler.COL_SYS_PREMIEREFOIS+" = ?",new String[]{"0"});
+        db.close();
+    }
     //ajouter getExo
 
     public User getUser(){

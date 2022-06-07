@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         DbHandler db;
         if(doesDatabaseExist(this,DbHandler.DATABASE)) {
             db = new DbHandler(this, null);
-            db.deleteAllUser();
         }
         else{
             db = new DbHandler(this, null);
@@ -38,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             Intent intent=new Intent(this,GetStartedActivity.class);
+            db.deleteAllUser();
             startActivity(intent);
             finish();
         }
