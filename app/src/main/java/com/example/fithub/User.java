@@ -1,5 +1,7 @@
 package com.example.fithub;
 
+import java.util.Date;
+
 public class User {
     private long id;
     private String name;

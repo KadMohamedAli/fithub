@@ -6,13 +6,17 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.slider.Slider;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class GoalActivity extends AppCompatActivity {
 
@@ -63,9 +67,14 @@ public class GoalActivity extends AppCompatActivity {
         bodyType2=cursor.getInt(8);
         goal1=cursor.getInt(5);
         targetBody2=cursor.getInt(6);
-        //birthday=Date.stringToDate(cursor.getString(2));
+        try{
+            birthday=new SimpleDateFormat("yyyy-MM-dd").parse(cursor.getString(2));}
+        catch(java.text.ParseException exp){
+            birthday=new Date(1970,1,1);
+        }
+        Log.i("GoalActivity", String.valueOf(birthday));
 
-        AMR=calculateAMR(calculateBMR(height,weight,new Date(31,3,2001)),fitnessLevel);//
+        AMR=calculateAMR(calculateBMR(height,weight,birthday),fitnessLevel);//
 
         BMI=(float)calculateBMI(height,weight);
         ContentValues contentValues=new ContentValues();
@@ -120,8 +129,8 @@ public class GoalActivity extends AppCompatActivity {
 
     }
 
-    public static int calculateBMR(int heightCM,int weightKG,Date birthday){
-        int ageY=getAge(birthday.getAn(), birthday.getMois(), birthday.getJour());
+    public static int calculateBMR(int heightCM, int weightKG, Date birthday){
+        int ageY=getAge(birthday.getYear(), birthday.getMonth(), birthday.getDay());
         double bmr=66.47+(13.75*weightKG)+(5.003*heightCM)-6.755*ageY;
         return (int)bmr;
     }

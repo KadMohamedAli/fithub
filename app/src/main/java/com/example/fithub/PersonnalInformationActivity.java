@@ -14,6 +14,10 @@ import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class PersonnalInformationActivity extends AppCompatActivity {
 
     @Override
@@ -44,9 +48,11 @@ public class PersonnalInformationActivity extends AppCompatActivity {
                 else{
                     SQLiteDatabase database=db.getWritableDatabase();
                     ContentValues contentValues=new ContentValues();
+                    Date date=new Date(datePicker.getYear(),datePicker.getMonth(),datePicker.getDayOfMonth());
+                    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                     contentValues.put(DbHandler.COL_USER_NAME,nomEditText.getText().toString());
                     contentValues.put(DbHandler.COL_USER_HEIGHT,taillePicker.getValue());
-                    contentValues.put(DbHandler.COL_USER_BIRTHDAY,Date.dateToString(new Date(datePicker.getDayOfMonth(),(datePicker.getMonth())+1,datePicker.getYear())));
+                    contentValues.put(DbHandler.COL_USER_BIRTHDAY,dateFormat.format(date));
                     database.update(DbHandler.TABLEUSER,contentValues,DbHandler.COL_USER_ID+" = ?",new String[]{"1"});
                     database.close();
                     db.close();

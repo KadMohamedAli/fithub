@@ -6,6 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class DbHandler extends SQLiteOpenHelper {
     private static final int VERSION=1;
 
@@ -157,9 +161,16 @@ public class DbHandler extends SQLiteOpenHelper {
         Cursor cursor=db.rawQuery("SELECT * from "+TABLEUSER+" WHERE "+COL_USER_ID+" =? ",new String[]{"1"});
         cursor.moveToNext();
 
+
+
         user.setId(cursor.getLong(0));
         user.setName(cursor.getString(1));
-        user.setBirthday(Date.stringToDate(cursor.getString(2)));
+        try{
+            user.setBirthday(new SimpleDateFormat("yyyy-MM-dd").parse(cursor.getString(2)));}
+        catch(java.text.ParseException exp){
+            user.setBirthday(new Date(1970,1,1));
+        }
+
         user.setHeight(cursor.getInt(3));
         user.setWeight(cursor.getInt(4));
         user.setBodyGoalOption1(cursor.getInt(5));
