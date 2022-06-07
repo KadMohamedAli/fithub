@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonnalInformationActivity"
+    android:background="@color/noir_fonce">
+
+    <DatePicker
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="160dp"
+        android:background="@color/noir_moins_fonce"
+        android:id="@+id/datePicker"
+        android:minDate="1/1/1950"
+        android:maxDate="31/12/2009"
+        />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@color/noir_moins_fonce"
+        app:layout_constraintTop_toBottomOf="@id/datePicker"
+        app:layout_constraintStart_toStartOf="@id/datePicker"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/ms_reference_sans_serif"
+        android:hint="@string/your_name"
+        android:textSize="18sp"
+        android:id="@+id/nomEditText"
+        android:inputType="text"
+        android:autofillHints="name"
+        android:paddingStart="20dp"
+        android:textColor="@color/white"
+        />
+    <NumberPicker
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:background="@color/noir_moins_fonce"
+        android:id="@+id/heightPicker"
+        app:layout_constraintTop_toBottomOf="@id/nomEditText"
+        app:layout_constraintStart_toStartOf="@id/datePicker"
+        android:layout_marginTop="80dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:id="@+id/continuerButtonPersonnalInformation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/continue1"
+        android:textSize="12sp"
+        android:fontFamily="@font/ms_reference_sans_serif"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

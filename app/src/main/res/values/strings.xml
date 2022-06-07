@@ -12,4 +12,25 @@
     <string name="hero">Hero</string>
     <string name="continue_button">CONTINUE</string>
     <string name="bodybuilder">Bodybuilder</string>
+    <string name="ectomorph">ECTOMORPH</string>
+    <string name="mesomorph">MESOMORPH</string>
+    <string name="endomorph">ENDOMORPH</string>
+    <string name="skinny_fat">SKINNY FAT</string>
+    <string name="strong_fat">STRONG FAT</string>
+    <string name="skinny_and_slim">SKINNY AND SLIM</string>
+    <string name="continue1">CONTINUE</string>
+    <string name="weak_chest">WEAK CHEST</string>
+    <string name="slim_legs">SLIM LEGS</string>
+    <string name="slim_arms">SLIM ARMS</string>
+    <string name="beer_belly">BEER BELLY</string>
+    <string name="your_name">Your name</string>
+    <string name="heart_disease">HEART DISEASE</string>
+    <string name="severe_scoliosis">SEVERE SCOLIOSIS</string>
+    <string name="spinal_damage">SPINAL DAMAGE</string>
+    <string name="benign_or_malignant_tumor">BENIGN OR MALIGNANT TUMOR</string>
+    <string name="hypertention">HYPERTENTION</string>
+    <string name="suggested_calories">SUGGESTED CALORIES</string>
+    <string name="carbs">CARBS</string>
+    <string name="fat">FAT</string>
+    <string name="protein">PROTEIN</string>
 </resources>

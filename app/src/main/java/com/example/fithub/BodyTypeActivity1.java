@@ -8,28 +8,29 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-public class ChooseYourGoalActivity2 extends AppCompatActivity {
+public class BodyTypeActivity1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_your_goal2);
+        setContentView(R.layout.activity_body_type1);
 
         DbHandler db=new DbHandler(this,null);
 
-        Button athleteBoutton=findViewById(R.id.athlete);
-        Button heroButton=findViewById(R.id.hero);
-        Button bodybuilderButton=findViewById(R.id.bodybuilder);
+        Button ectomorphBoutton=findViewById(R.id.ectomorph);
+        Button mesomorphBoutton=findViewById(R.id.mesomorph);
+        Button endomorphBoutton=findViewById(R.id.endomorph);
+        ImageButton infoImageBoutton=findViewById(R.id.infoImageBoutton);
 
-        Intent intent=new Intent(getApplicationContext(),BodyTypeActivity1.class);
-
-        athleteBoutton.setOnClickListener(new View.OnClickListener() {
+        Intent intent=new Intent(getApplicationContext(),BodyTypeActivity2.class);
+        ectomorphBoutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SQLiteDatabase database=db.getWritableDatabase();
                 ContentValues contentValues=new ContentValues();
-                contentValues.put(DbHandler.COL_USER_BODYGOALOPTION2,0);
+                contentValues.put(DbHandler.COL_USER_BODYTYPE1,0);
                 database.update(DbHandler.TABLEUSER,contentValues,DbHandler.COL_USER_ID+" = ?",new String[]{"1"});
                 database.close();
                 db.close();
@@ -37,13 +38,12 @@ public class ChooseYourGoalActivity2 extends AppCompatActivity {
                 finish();
             }
         });
-
-        heroButton.setOnClickListener(new View.OnClickListener() {
+        mesomorphBoutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SQLiteDatabase database=db.getWritableDatabase();
                 ContentValues contentValues=new ContentValues();
-                contentValues.put(DbHandler.COL_USER_BODYGOALOPTION2,1);
+                contentValues.put(DbHandler.COL_USER_BODYTYPE1,1);
                 database.update(DbHandler.TABLEUSER,contentValues,DbHandler.COL_USER_ID+" = ?",new String[]{"1"});
                 database.close();
                 db.close();
@@ -51,13 +51,12 @@ public class ChooseYourGoalActivity2 extends AppCompatActivity {
                 finish();
             }
         });
-
-        bodybuilderButton.setOnClickListener(new View.OnClickListener() {
+        endomorphBoutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SQLiteDatabase database=db.getWritableDatabase();
                 ContentValues contentValues=new ContentValues();
-                contentValues.put(DbHandler.COL_USER_BODYGOALOPTION2,2);
+                contentValues.put(DbHandler.COL_USER_BODYTYPE1,2);
                 database.update(DbHandler.TABLEUSER,contentValues,DbHandler.COL_USER_ID+" = ?",new String[]{"1"});
                 database.close();
                 db.close();
@@ -65,7 +64,11 @@ public class ChooseYourGoalActivity2 extends AppCompatActivity {
                 finish();
             }
         });
+        infoImageBoutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-
+            }
+        });
     }
 }
