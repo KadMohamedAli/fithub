@@ -2,11 +2,10 @@
 <ScrollView
 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CanWeKnowYouKingActivity2"
+    tools:context=".CanWeKnowYouKingActivity3"
     android:background="@color/noir_fonce">
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,58 +48,63 @@
             android:layout_marginBottom="25sp"/>
 
             <CheckBox
-                android:id="@+id/heart_disease"
+                android:id="@+id/condition_1"
                 android:background="@color/faded_white"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/heart_disease"
                 android:textSize="15sp"
                 android:textColor="@color/white"
-                android:layout_marginBottom="15sp">
+                android:layout_marginBottom="15sp"
+                android:onClick="uncheck_none_of_the_above">
             </CheckBox>
 
         <CheckBox
-            android:id="@+id/severe_scoliosis"
+            android:id="@+id/condition_2"
             android:background="@color/faded_white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/severe_scoliosis"
             android:textSize="15sp"
             android:textColor="@color/white"
-            android:layout_marginBottom="15sp">
+            android:layout_marginBottom="15sp"
+            android:onClick="uncheck_none_of_the_above">
         </CheckBox>
 
         <CheckBox
-            android:id="@+id/spinal_damage"
+            android:id="@+id/condition_3"
             android:background="@color/faded_white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/spinal_damage"
             android:textSize="15sp"
             android:textColor="@color/white"
-            android:layout_marginBottom="15sp">
+            android:layout_marginBottom="15sp"
+            android:onClick="uncheck_none_of_the_above">
         </CheckBox>
 
         <CheckBox
-            android:id="@+id/benign_or_malignant_tumor"
+            android:id="@+id/condition_4"
             android:background="@color/faded_white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/benign_or_malignant_tumor"
             android:textSize="15sp"
             android:textColor="@color/white"
-            android:layout_marginBottom="15sp">
+            android:layout_marginBottom="15sp"
+            android:onClick="uncheck_none_of_the_above">
         </CheckBox>
 
         <CheckBox
-            android:id="@+id/hyper_tention"
+            android:id="@+id/condition_5"
             android:background="@color/faded_white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/hypertention"
             android:textSize="15sp"
             android:textColor="@color/white"
-            android:layout_marginBottom="15sp">
+            android:layout_marginBottom="15sp"
+            android:onClick="uncheck_none_of_the_above">
         </CheckBox>
 
         <View
@@ -120,7 +124,8 @@
             android:text="@string/none_of_the_above"
             android:textSize="15sp"
             android:textColor="@color/white"
-            android:layout_marginBottom="10sp">
+            android:layout_marginBottom="10sp"
+            android:onClick="uncheck_all_conditions">
         </CheckBox>
 
     </LinearLayout>

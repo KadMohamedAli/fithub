@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CanWeKnowYouKingActivity4"
+    android:background="@color/noir_fonce">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15sp">
+
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:layout_marginBottom="40sp"
+            android:gravity="center"
+            android:text="@string/can_we_know_you_king"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="240dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_for_layout"
+            android:orientation="vertical"
+            android:paddingHorizontal="35sp"
+            android:paddingVertical="20sp"
+            android:layout_marginBottom="10sp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_goal_is_to_achieve_a_shreded_body_in_6_months"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="101dp"
+                tools:layout_editor_absoluteY="165dp"
+                android:layout_marginBottom="25sp"/>
+
+            <LinearLayout
+                android:padding="15sp"
+                android:background="@color/faded_white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="15sp">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/current_bmi"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="10sp">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23.67"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="6sp">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your weight is: normal"
+                    android:textSize="15sp"
+                    android:textColor="@color/white">
+
+                </TextView>
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/fitness_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_level"
+                    android:stepSize="1"
+                    android:valueFrom="1"
+                    android:valueTo="10"
+                    android:value="4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:trackColor="@color/noir_moins_fonce" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="12sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/underweight"
+                        android:gravity="start"
+                        android:textSize="12sp"
+                        android:textColor="@color/grey">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textColor="@color/grey">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/obese"
+                        android:textSize="12sp"
+                        android:gravity="end"
+                        android:textColor="@color/grey">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/faded_white"
+                android:padding="15sp"
+                android:layout_marginBottom="15sp">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/daily_calorie_norm"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="5sp">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3750 kcal"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="5sp">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/faded_white"
+                android:padding="15sp"
+                android:layout_marginBottom="15sp">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/daily_water_minimum"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="5sp">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.3 l"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="5sp">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <TableRow
+                android:padding="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:layout_marginEnd="5sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="@string/suggested_calories"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginEnd="5sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="@string/carbs"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginEnd="5sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="@string/fat"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_marginEnd="5sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="@string/protein"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/suggested_calories"
+                    android:layout_marginEnd="5sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="2656 kcal"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/carbs"
+                    android:layout_marginEnd="5sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="125g-332g"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fat"
+                    android:layout_marginEnd="5sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="78g-148g"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/protein"
+                    android:layout_marginEnd="5sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="99g-332g"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+
+            </TableRow>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/continue_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/continue_button"
+            android:layout_marginTop="10sp"
+            android:padding="15sp">
+        </Button>
+
+    </LinearLayout>
+
+</ScrollView>
