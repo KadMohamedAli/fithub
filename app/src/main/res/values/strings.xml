@@ -42,7 +42,7 @@
     <string name="___cm">___cm</string>
     <string name="___ft">___cm</string>
     <string name="___kg">___kg</string>
-    <string name="___lb">___kg</string>
+    <string name="___lb">___lb</string>
 
     <string name="target_weight_kg">Target weight (kg)</string>
     <string name="target_weight_lb">Target weight (lb)</string>
