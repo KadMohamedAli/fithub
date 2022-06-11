@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">fithub</string>
     <string name="get_started">GET STARTED</string>
-    <string name="choose_your_goal">CHOOSE YOUR GOAL</string>
+    <string name="choose_your_goal">Choose Your Goal</string>
     <string name="lose_weight">Lose Weight</string>
     <string name="get_shredded">Get shredded</string>
     <string name="gain_muscle_mass">Gain Muscle Mass</string>
-    <string name="choose_the_body_you_want">CHOOSE THE BODY YOU WANT</string>
+    <string name="choose_the_body_you_want">Choose The Body You Want</string>
     <string name="athlete">Athlete</string>
     <string name="hero">Hero</string>
     <string name="bodybuilder">Bodybuilder</string>
@@ -86,4 +86,6 @@
     <string name="protein">Protein</string>
     <string name="daily_calorie_norm">Daily calorie norm</string>
     <string name="daily_water_minimum">Daily water minimum</string>
+    <string name="build_your_perfect_body">BUILD YOUR PERFECT BODY</string>
+    <string name="choose_your_body_type">Choose Your Body Type</string>
 </resources>
