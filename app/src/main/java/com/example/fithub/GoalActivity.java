@@ -34,6 +34,7 @@ public class GoalActivity extends AppCompatActivity {
     private int goal1;
     private float BMI;
     private int AMR;
+    private int cpt;
 
 
     @Override
@@ -52,6 +53,8 @@ public class GoalActivity extends AppCompatActivity {
         TextView fatTable=findViewById(R.id.fatTable);
         TextView proteinTable=findViewById(R.id.proteinTable);
         Button continuer=findViewById(R.id.continuerGoalActivity);
+
+        cpt=0;
 
         DbHandler db=new DbHandler(this,null);
         SQLiteDatabase database=db.getReadableDatabase();
@@ -172,6 +175,11 @@ public class GoalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 db.setSys(1);
+                if(cpt==0) {
+                    RemplirBaseDonnee a = new RemplirBaseDonnee(getApplicationContext());
+                    a.remplir();
+                }
+                cpt=+1;
             }
         });
 
