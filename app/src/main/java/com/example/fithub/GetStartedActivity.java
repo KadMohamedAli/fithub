@@ -1,6 +1,6 @@
 package com.example.fithub;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -18,6 +18,13 @@ public class GetStartedActivity extends AppCompatActivity {
         Button boutonGetStarted=findViewById(R.id.boutonGetStarted);
         boutonGetStarted.setOnClickListener(view -> {
             Intent intent=new Intent(getApplicationContext(),ChooseYourGoalActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
+        Button bouttonCanWeKnowYou = findViewById(R.id.bouttonCanWeKnowYou);
+        bouttonCanWeKnowYou.setOnClickListener(view -> {
+            Intent intent=new Intent(getApplicationContext(),CanWeKnowYouKingActivity1.class);
             startActivity(intent);
             finish();
         });

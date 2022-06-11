@@ -8,16 +8,31 @@
     android:background="@color/noir_fonce">
 
     <Button
+    android:layout_width="250dp"
+    android:layout_height="60dp"
+    android:id="@+id/boutonGetStarted"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginBottom="60dp"
+    android:fontFamily="@font/ms_reference_sans_serif"
+    android:text="@string/get_started"
+    android:textSize="22sp"
+    />
+
+    <Button
+        android:id="@+id/bouttonCanWeKnowYou"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:id="@+id/boutonGetStarted"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="136dp"
         android:fontFamily="@font/ms_reference_sans_serif"
-        android:text="@string/get_started"
-        android:textSize="22sp"
-        />
+        android:text="@string/can_we_know_you_king"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
