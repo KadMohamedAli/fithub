@@ -71,7 +71,7 @@ public class GoalActivity extends AppCompatActivity {
         try{
             birthday=new SimpleDateFormat("yyyy-MM-dd").parse(cursor.getString(2));}
         catch(java.text.ParseException exp){
-            birthday=new Date(1970,1,1);
+            birthday=new Date(2000,1,1);
         }
         Log.i("GoalActivity", String.valueOf(birthday));
         birthday=new Date(2000,1,1);//kyn probleme m3a les dates ki yetrigla probleme naho cette ligne

@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class DbHandler extends SQLiteOpenHelper {
@@ -18,6 +19,10 @@ public class DbHandler extends SQLiteOpenHelper {
     public static final String TABLEUSER="user";
     public static final String TABLEEXERCICE="exercice";
     public static final String TABLESYS="sys";
+    public static final String TABLEWORKOUT="workout";
+    public static final String TABLEWOD="wod";
+    public static final String TABLESERIE="serie";
+
 
     public static final String COL_USER_ID="_id";
     public static final String COL_USER_NAME="name";
@@ -52,6 +57,25 @@ public class DbHandler extends SQLiteOpenHelper {
     public static final String COL_EXERCICE_PHOTO="photo";
     public static final String COL_EXERCICE_DESCRIPTION="description";
     public static final String COL_EXERCICE_VIDEO="video";
+
+    public static final String COL_WORKOUT_ID="_id";
+    public static final String COL_WORKOUT_NAME="name";
+    public static final String COL_WORKOUT_DESCRIPTION="description";
+    public static final String COL_WORKOUT_PHOTO="photo";
+    public static final String COL_WORKOUT_LISTEWOD="WODs";
+
+    public static final String COL_WOD_ID="_id";
+    public static final String COL_WOD_NAME="name";
+    public static final String COL_WOD_DESCRIPTION="description";
+    public static final String COL_WOD_LISTESERIE="liste_serie";
+    public static final String COL_WOD_JOUR="jour";
+
+    public static final String COL_SERIE_ID="_id";
+    public static final String COL_SERIE_EXERCICE="exercice";
+    public static final String COL_SERIE_NSERIE="nSerie";
+    public static final String COL_SERIE_NREP="nRep";
+    public static final String COL_SERIE_TREPOS="tRepos";
+
 
     public static final String COL_SYS_PREMIEREFOIS="premiereFois";
 
@@ -100,9 +124,34 @@ public class DbHandler extends SQLiteOpenHelper {
         String requete3=" CREATE TABLE "+TABLESYS+
                 " ( "+COL_SYS_PREMIEREFOIS+" INTEGER "+
                 ")";
+        String requete4=" CREATE TABLE "+TABLEWORKOUT+
+                " ( "+COL_WORKOUT_ID+" INTEGER PRIMARY KEY AUTOINCREMENT , "+
+                COL_WORKOUT_NAME+" TEXT, "+
+                COL_WORKOUT_DESCRIPTION+" TEXT, "+
+                COL_WORKOUT_PHOTO+" TEXT, "+
+                COL_WORKOUT_LISTEWOD+" TEXT "+
+                ")";
+        String requete5=" CREATE TABLE "+TABLEWOD+
+                " ( "+COL_WOD_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+
+                COL_WOD_NAME+" TEXT, "+
+                COL_WOD_DESCRIPTION+" TEXT, "+
+                COL_WOD_LISTESERIE+" TEXT, "+
+                COL_WOD_JOUR+" INTEGER "+
+                ")";
+        String requete6="CREATE TABLE "+TABLESERIE+
+                " ( "+COL_SERIE_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+
+                COL_SERIE_EXERCICE+" INTEGER, "+
+                COL_SERIE_NREP+" INTEGER, "+
+                COL_SERIE_NSERIE+" INTEGER, "+
+                COL_SERIE_TREPOS+" INTEGER, "+
+                "FOREIGN KEY("+COL_SERIE_EXERCICE+") REFERENCES "+TABLEEXERCICE+"("+COL_EXERCICE_ID+"))";
+
         sqLiteDatabase.execSQL(requete1);
         sqLiteDatabase.execSQL(requete2);
         sqLiteDatabase.execSQL(requete3);
+        sqLiteDatabase.execSQL(requete4);
+        sqLiteDatabase.execSQL(requete5);
+        sqLiteDatabase.execSQL(requete6);
     }
 
     @Override
@@ -110,12 +159,31 @@ public class DbHandler extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLEUSER);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLEEXERCICE);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLESYS);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLEWORKOUT);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLEWOD);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLESERIE);
         onCreate(sqLiteDatabase);
     }
     public void deleteAllUser(){
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM "+TABLEUSER); //delete all rows in a table
         db.close();
+    }
+    public Wod getWod(long id){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery("SELECT * FROM "+TABLEWOD+" WHERE "+COL_WOD_ID+" = ?",new String[]{String.valueOf(id)});
+        cursor.moveToNext();
+        Wod w=new Wod();
+
+        w.set_id(id);
+        w.setName(cursor.getString(1));
+        w.setDescription(cursor.getString(2));
+        w.setListeSerie(w.stringToSerie(cursor.getString(3)));
+        w.setJour(cursor.getInt(4));
+
+        cursor.close();
+        db.close();
+        return w;
     }
 
     public void addExercice(Exercice exo){
@@ -128,6 +196,72 @@ public class DbHandler extends SQLiteOpenHelper {
         SQLiteDatabase db=this.getWritableDatabase();
         exo.setId(db.insert(TABLEEXERCICE,null,contentValues));
         db.close();
+    }
+
+    public void addWod(Wod wod){
+        ContentValues contentValues=new ContentValues();
+        contentValues.put(COL_WOD_NAME,wod.getName());
+        contentValues.put(COL_WOD_DESCRIPTION,wod.getDescription());
+        contentValues.put(COL_WOD_JOUR,wod.getJour());
+        contentValues.put(COL_WOD_LISTESERIE,wod.serieToString(wod.getListeSerie()));
+        SQLiteDatabase db=this.getWritableDatabase();
+        wod.set_id(db.insert(TABLEWOD,null,contentValues));
+        db.close();
+    }
+    public void addWorkout(Workout workout){
+        ContentValues contentValues=new ContentValues();
+        contentValues.put(COL_WORKOUT_NAME,workout.getName());
+        contentValues.put(COL_WORKOUT_DESCRIPTION,workout.getDescription());
+        contentValues.put(COL_WORKOUT_PHOTO,workout.getPhoto());
+        contentValues.put(COL_WORKOUT_LISTEWOD,workout.listeWodToString(workout.getListeWod()));
+        SQLiteDatabase db=this.getWritableDatabase();
+        workout.setId(db.insert(TABLEWORKOUT,null,contentValues));
+        db.close();
+    }
+
+    public void addSerie(Serie serie){
+        ContentValues contentValues=new ContentValues();
+        contentValues.put(COL_SERIE_EXERCICE,serie.getExercice_id());
+        contentValues.put(COL_SERIE_NREP,serie.getnRep());
+        contentValues.put(COL_SERIE_NSERIE,serie.getnSerie());
+        contentValues.put(COL_SERIE_TREPOS,serie.gettRepos());
+        SQLiteDatabase db=this.getWritableDatabase();
+        serie.set_id(db.insert(TABLESERIE,null,contentValues));
+        db.close();
+    }
+
+    public Serie getSerie(long id){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery("SELECT * FROM "+TABLESERIE+" WHERE "+COL_SERIE_ID+" = ?",new String[]{String.valueOf(id)});
+        cursor.moveToNext();
+        Serie s=new Serie();
+
+        s.set_id(id);
+        s.setExercice(getExercice(cursor.getInt(1)));
+        s.setnRep(cursor.getInt(2));
+        s.setnSerie(cursor.getInt(3));
+        s.settRepos(cursor.getInt(4));
+
+        cursor.close();
+        db.close();
+        return s;
+    }
+    public Exercice getExercice(long id){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery("SELECT * FROM "+TABLEEXERCICE+" WHERE "+COL_EXERCICE_ID+" = ?",new String[]{String.valueOf(id)});
+        cursor.moveToNext();
+        Exercice exo=new Exercice();
+
+        exo.setId(id);
+        exo.setName(cursor.getString(1));
+        exo.setAppreciation(cursor.getInt(2));
+        exo.setPhoto(cursor.getString(3));
+        exo.setDescription(cursor.getString(4));
+        exo.setVideo(cursor.getString(5));
+
+        cursor.close();
+        db.close();
+        return  exo;
     }
     public void addSys(int i){
         SQLiteDatabase db=this.getWritableDatabase();

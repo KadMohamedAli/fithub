@@ -12,6 +12,17 @@ public class Exercice {
         this.id=id;
         this.name=name;
     }
+    public Exercice(){
+
+    }
+
+    public Exercice(String name, int appreciation, String photo, String description,String video) {
+        this.name = name;
+        this.appreciation = appreciation;
+        this.photo = photo;
+        this.description = description;
+        this.video=video;
+    }
 
     public Exercice(int id, String name, int appreciation, String photo, String description,String video) {
         this.id = id;

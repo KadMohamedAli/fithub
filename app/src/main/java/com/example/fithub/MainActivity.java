@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         int premiereFois= db.getSys();
 
-
+        RemplirBaseDonnee a=new RemplirBaseDonnee(getApplicationContext());
+        a.remplir();
 
         if(premiereFois!=0){
             Intent intent=new Intent(this,afficheSwalahActivity.class);
