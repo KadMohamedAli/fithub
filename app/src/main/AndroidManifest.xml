@@ -10,7 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fithub">
         <activity
-            android:name=".CalorieCalculatorActivity"
+            android:name=".GoalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DiseaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PersonnalInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProblemAreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BodyFatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BodyTypeActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".BodyTypeActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".afficheSwalahActivity"
             android:exported="false" />
         <activity
             android:name=".ChooseYourGoalActivity2"
