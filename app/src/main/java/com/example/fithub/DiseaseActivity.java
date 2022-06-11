@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 
 public class DiseaseActivity extends AppCompatActivity {
 
@@ -24,11 +25,11 @@ public class DiseaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_disease);
 
-        Button heart=findViewById(R.id.heartDiseaseButton);
-        Button scoliosis=findViewById(R.id.severeScoliosis);
-        Button spinal=findViewById(R.id.spinalDamage);
-        Button tumor=findViewById(R.id.tumor);
-        Button hypertention=findViewById(R.id.hypertention);
+        CheckBox heart=findViewById(R.id.heartDiseaseButton);
+        CheckBox scoliosis=findViewById(R.id.severeScoliosis);
+        CheckBox spinal=findViewById(R.id.spinalDamage);
+        CheckBox tumor=findViewById(R.id.tumor);
+        CheckBox hypertention=findViewById(R.id.hypertention);
         Button continuer=findViewById(R.id.continuerDisease);
 
         DbHandler db=new DbHandler(this,null);
@@ -39,60 +40,42 @@ public class DiseaseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 entier0+=1;
+                /**
                 if((entier0%2)==0){
                     heart.setBackgroundColor(Color.parseColor("#323232"));
                 }
                 else{
                     heart.setBackgroundColor(Color.parseColor("#3700FD"));
                 }
+                **/
             }
         });
         scoliosis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 entier1+=1;
-                if((entier1%2)==0){
-                    scoliosis.setBackgroundColor(Color.parseColor("#323232"));
-                }
-                else{
-                    scoliosis.setBackgroundColor(Color.parseColor("#3700FD"));
-                }
+
             }
         });
         spinal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 entier2+=1;
-                if((entier2%2)==0){
-                    spinal.setBackgroundColor(Color.parseColor("#323232"));
-                }
-                else{
-                    spinal.setBackgroundColor(Color.parseColor("#3700FD"));
-                }
+
             }
         });
         tumor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 entier3+=1;
-                if((entier3%2)==0){
-                    tumor.setBackgroundColor(Color.parseColor("#323232"));
-                }
-                else{
-                    tumor.setBackgroundColor(Color.parseColor("#3700FD"));
-                }
+
             }
         });
         hypertention.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 entier4+=1;
-                if((entier4%2)==0){
-                    hypertention.setBackgroundColor(Color.parseColor("#323232"));
-                }
-                else{
-                    hypertention.setBackgroundColor(Color.parseColor("#3700FD"));
-                }
+
             }
         });
         continuer.setOnClickListener(new View.OnClickListener() {
@@ -116,4 +99,5 @@ public class DiseaseActivity extends AppCompatActivity {
             }
         });
     }
+
 }
