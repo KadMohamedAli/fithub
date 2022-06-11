@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if(premiereFois!=0){
-            Intent intent=new Intent(this,afficheSwalahActivity.class);
+            Intent intent=new Intent(this,MainActivity2.class);
             startActivity(intent);
             finish();
         }

@@ -3,6 +3,7 @@ package com.example.fithub;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -170,7 +171,7 @@ public class GoalActivity extends AppCompatActivity {
             }
 
 
-
+        Intent intent=new Intent(this,MainActivity2.class);
         continuer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -180,6 +181,9 @@ public class GoalActivity extends AppCompatActivity {
                     a.remplir();
                 }
                 cpt=+1;
+
+                startActivity(intent);
+                finish();
             }
         });
 

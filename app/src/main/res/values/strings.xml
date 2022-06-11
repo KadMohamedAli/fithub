@@ -30,4 +30,10 @@
     <string name="carbs">CARBS</string>
     <string name="fat">FAT</string>
     <string name="protein">PROTEIN</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="planner">Planner</string>
+    <string name="about_me">About me</string>
 </resources>

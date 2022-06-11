@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.fithub.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_planner"
+            app:destination="@id/navigation_planner" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_aboutme"
+            app:destination="@id/navigation_aboutme" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_planner"
+        android:name="com.example.fithub.ui.planner.PlannerFragment"
+        android:label="@string/planner"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_planner_to_navigation_aboutme"
+            app:destination="@id/navigation_aboutme" />
+        <action
+            android:id="@+id/action_navigation_planner_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_aboutme"
+        android:name="com.example.fithub.ui.aboutme.AboutmeFragment"
+        android:label="@string/about_me"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_navigation_aboutme_to_navigation_planner"
+            app:destination="@id/navigation_planner" />
+        <action
+            android:id="@+id/action_navigation_aboutme_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>
