@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 
 public class ProblemAreaActivity extends AppCompatActivity {
 
@@ -26,10 +27,10 @@ public class ProblemAreaActivity extends AppCompatActivity {
 
         DbHandler db=new DbHandler(this,null);
 
-        Button weakChest=findViewById(R.id.weakChestButton);
-        Button slimLegs=findViewById(R.id.slimLegsButton);
-        Button slimArms=findViewById(R.id.slimArmsButton);
-        Button beerBelly=findViewById(R.id.beerBellyButton);
+        CheckBox weakChest=findViewById(R.id.weakChestButton);
+        CheckBox slimLegs=findViewById(R.id.slimLegsButton);
+        CheckBox slimArms=findViewById(R.id.slimArmsButton);
+        CheckBox beerBelly=findViewById(R.id.beerBellyButton);
         Button continuer=findViewById(R.id.continuerButtonProblemArea);
 
         Intent intent=new Intent(getApplicationContext(),PersonnalInformationActivity.class);
@@ -37,48 +38,32 @@ public class ProblemAreaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 entier0+=1;
+                /**
                 if((entier0%2)==0){
                     weakChest.setBackgroundColor(Color.parseColor("#323232"));
                   }
                 else{
                     weakChest.setBackgroundColor(Color.parseColor("#3700FD"));
                 }
+                **/
             }
         });
         slimLegs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 entier1+=1;
-                if((entier1%2)==0){
-                    slimLegs.setBackgroundColor(Color.parseColor("#323232"));
-                }
-                else{
-                    slimLegs.setBackgroundColor(Color.parseColor("#3700FD"));
-                }
             }
         });
         slimArms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 entier2+=1;
-                if((entier2%2)==0){
-                    slimArms.setBackgroundColor(Color.parseColor("#323232"));
-                }
-                else{
-                    slimArms.setBackgroundColor(Color.parseColor("#3700FD"));
-                }
             }
         });
         beerBelly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 entier3+=1;
-                if((entier3%2)==0){
-                    beerBelly.setBackgroundColor(Color.parseColor("#323232"));
-                }
-                else{
-                    beerBelly.setBackgroundColor(Color.parseColor("#3700FD"));
-                }
             }
         });
         continuer.setOnClickListener(new View.OnClickListener() {

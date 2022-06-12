@@ -15,6 +15,7 @@ android:background="@color/noir_fonce">
 
 
     <TextView
+        android:fontFamily="@font/ms_reference_sans_serif"
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,6 +36,7 @@ android:background="@color/noir_fonce">
         android:layout_marginBottom="10sp">
 
         <TextView
+            android:fontFamily="@font/ms_reference_sans_serif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/choose_your_body_type"

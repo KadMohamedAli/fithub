@@ -9,17 +9,17 @@
     <string name="athlete">Athlete</string>
     <string name="hero">Hero</string>
     <string name="bodybuilder">Bodybuilder</string>
-    <string name="ectomorph">ECTOMORPH</string>
-    <string name="mesomorph">MESOMORPH</string>
-    <string name="endomorph">ENDOMORPH</string>
-    <string name="skinny_fat">SKINNY FAT</string>
-    <string name="strong_fat">STRONG FAT</string>
+    <string name="ectomorph">Ectomorph</string>
+    <string name="mesomorph">Mesomorph</string>
+    <string name="endomorph">Endomorph</string>
+    <string name="skinny_fat">Skinny Fat</string>
+    <string name="strong_fat">Stron Fat</string>
     <string name="skinny_and_slim">SKINNY AND SLIM</string>
     <string name="continue1">CONTINUE</string>
-    <string name="weak_chest">WEAK CHEST</string>
-    <string name="slim_legs">SLIM LEGS</string>
-    <string name="slim_arms">SLIM ARMS</string>
-    <string name="beer_belly">BEER BELLY</string>
+    <string name="weak_chest">Weak Chest</string>
+    <string name="slim_legs">Slim Legs</string>
+    <string name="slim_arms">Slim Arms</string>
+    <string name="beer_belly">Beer Belly</string>
 
     <string name="can_we_know_you_king">CAN WE KNOW YOU KING</string>
     <string name="calorie_calculator">CALORIE CALCULATOR</string>
@@ -35,29 +35,17 @@
 
     <string name="whats_your_height">What\'s your height?</string>
 
-    <string name="continue_button">CONTINUE</string>
-
-
-    <string name="units">Units</string>
-    <string name="feets_inches">ft, in</string>
     <string name="centimeters">cm</string>
     <string name="kilograms">kg</string>
-    <string name="pounds">lb</string>
 
     <string name="height_cm">Height (cm)</string>
-    <string name="height_ft">Height (ft)</string>
     <string name="weight_kg">Weight (kg)</string>
-    <string name="weight_lb">Height (lb)</string>
 
-    <string name="___cm">___cm</string>
-    <string name="___ft">___ft</string>
-    <string name="___kg">___kg</string>
-    <string name="___lb">___lb</string>
+
 
     <string name="target_weight_kg">Target weight (kg)</string>
-    <string name="target_weight_lb">Target weight (lb)</string>
     <string name="current_weight_kg">Current weight (kg)</string>
-    <string name="current_weight_lb">Current weight (lb)</string>
+
 
     <string name="choose_your_current_level_of_fitness_to_align_the_workout_plan_with">Choose your current level of fitness to align the workout plan with.</string>
     <string name="what_s_your_level_of_fitness">What\'s your level of fitness?</string>
@@ -88,4 +76,8 @@
     <string name="daily_water_minimum">Daily water minimum</string>
     <string name="build_your_perfect_body">BUILD YOUR PERFECT BODY</string>
     <string name="choose_your_body_type">Choose Your Body Type</string>
+    <string name="choose_your_level_of_body_fat">Choose Your Level of Body Fat</string>
+    <string name="select_problem_areas">Select Problem Areas</string>
+    <string name="_5_9">5-9%</string>
+    <string name="_40"><![CDATA[>40%]]></string>
 </resources>

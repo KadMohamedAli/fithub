@@ -1,42 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".BodyFatActivity"
     android:background="@color/noir_fonce">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15sp">
 
-    <com.google.android.material.slider.Slider
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="280dp"
-        android:layout_marginStart="40dp"
-        android:id="@+id/slider"
-        android:valueFrom="5"
-        android:valueTo="40"
-        app:thumbColor="@color/couleur3"
-        app:tickColor="@color/couleur3"
-        app:haloColor="@color/couleur3"
-        app:trackColor="@color/couleur1"
-        />
+        <TextView
+            android:fontFamily="@font/ms_reference_sans_serif"
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:layout_marginBottom="150sp"
+            android:gravity="center"
+            android:text="@string/build_your_perfect_body"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="240dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_for_layout"
+            android:orientation="vertical"
+            android:paddingHorizontal="35sp"
+            android:paddingVertical="20sp"
+            android:layout_marginBottom="10sp"
+            >
+
+            <TextView
+                android:fontFamily="@font/ms_reference_sans_serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_your_level_of_body_fat"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="101dp"
+                tools:layout_editor_absoluteY="165dp"
+                android:layout_marginBottom="15sp"/>
 
 
-    <Button
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        app:layout_constraintTop_toBottomOf="@id/slider"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="240dp"
-        android:fontFamily="@font/ms_reference_sans_serif"
-        android:text="@string/continue1"
-        android:id="@+id/continueButton"
-        android:textSize="12sp"
-        android:backgroundTint="@color/couleur3"
-        android:layout_marginTop="20dp"
-        />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="2sp"
+                >
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.slider.Slider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/activity_level"
+                    android:id="@+id/slider"
+                    android:valueFrom="5"
+                    android:valueTo="40"
+                    app:thumbColor="@color/couleur3"
+                    app:tickColor="@color/couleur3"
+                    app:haloColor="@color/couleur3"
+                    app:trackColor="@color/couleur1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_5_9"
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:textSize="14sp"
+                        android:textColor="@color/grey">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:text="@string/_40"
+                        android:textSize="14sp"
+                        android:textColor="@color/grey"
+                        android:gravity="end">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10sp"
+            android:text="@string/continue1"
+            android:fontFamily="@font/ms_reference_sans_serif"
+            android:padding="15sp">
+        </Button>
+
+    </LinearLayout>
+</ScrollView>

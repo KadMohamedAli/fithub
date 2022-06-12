@@ -14,6 +14,7 @@
 
 
     <TextView
+        android:fontFamily="@font/ms_reference_sans_serif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10sp"
@@ -36,11 +37,12 @@
         >
 
         <TextView
+            android:fontFamily="@font/ms_reference_sans_serif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/whats_your_date_of_birth"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="101dp"
             tools:layout_editor_absoluteY="165dp"
@@ -73,18 +75,19 @@
         >
 
         <TextView
+            android:fontFamily="@font/ms_reference_sans_serif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/what_should_we_call_you"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="101dp"
             tools:layout_editor_absoluteY="165dp"
             android:layout_marginBottom="25sp"/>
 
         <TextView
-
+            android:fontFamily="@font/ms_reference_sans_serif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/your_name"
@@ -94,6 +97,7 @@
         </TextView>
 
         <EditText
+            android:fontFamily="@font/ms_reference_sans_serif"
             android:id="@+id/nomEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -122,11 +126,12 @@
         >
 
         <TextView
+            android:fontFamily="@font/ms_reference_sans_serif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/whats_your_height"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="101dp"
             tools:layout_editor_absoluteY="165dp"

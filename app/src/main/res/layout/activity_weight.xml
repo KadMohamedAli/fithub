@@ -15,6 +15,7 @@
         android:padding="15sp">
 
         <TextView
+            android:fontFamily="@font/ms_reference_sans_serif"
             android:id="@+id/titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,11 +39,12 @@
             >
 
             <TextView
+                android:fontFamily="@font/ms_reference_sans_serif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/what_s_your_current_and_target_weight"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="101dp"
                 tools:layout_editor_absoluteY="165dp"
@@ -50,6 +52,7 @@
 
 
             <TextView
+                android:fontFamily="@font/ms_reference_sans_serif"
                 android:id="@+id/weight_input_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,6 +72,7 @@
                 />
 
             <TextView
+                android:fontFamily="@font/ms_reference_sans_serif"
                 android:id="@+id/target_weight_input_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,17 +105,19 @@
             >
 
             <TextView
+                android:fontFamily="@font/ms_reference_sans_serif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/what_s_your_level_of_fitness"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="101dp"
                 tools:layout_editor_absoluteY="165dp"
                 android:layout_marginBottom="10sp"/>
 
             <TextView
+                android:fontFamily="@font/ms_reference_sans_serif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/choose_your_current_level_of_fitness_to_align_the_workout_plan_with"
@@ -135,6 +141,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:fontFamily="@font/ms_reference_sans_serif"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/scroll_view_1"
@@ -144,6 +151,7 @@
                     </TextView>
 
                     <TextView
+                        android:fontFamily="@font/ms_reference_sans_serif"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/scroll_view_10"
@@ -172,6 +180,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:fontFamily="@font/ms_reference_sans_serif"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/worst_shape"
@@ -181,6 +190,7 @@
                     </TextView>
 
                     <TextView
+                        android:fontFamily="@font/ms_reference_sans_serif"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/i_m_on_fire"

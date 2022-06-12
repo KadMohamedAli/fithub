@@ -15,6 +15,7 @@
 
 
         <TextView
+            android:fontFamily="@font/ms_reference_sans_serif"
             android:id="@+id/titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,11 +36,12 @@
             android:layout_marginBottom="10sp">
 
             <TextView
+                android:fontFamily="@font/ms_reference_sans_serif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/choose_the_body_you_want"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="25sp"/>
 
