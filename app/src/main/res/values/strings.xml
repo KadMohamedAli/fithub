@@ -80,4 +80,7 @@
     <string name="select_problem_areas">Select Problem Areas</string>
     <string name="_5_9">5-9%</string>
     <string name="_40"><![CDATA[>40%]]></string>
+    <string name="mesomorph_bio">Loses body fat easily and gains muscle quickly.</string>
+    <string name="ectomorph_bio">Litle body fat and muscle. Have a hard time gaining weight.</string>
+    <string name="endomorph_bio">Gains weight easily compared to other body types.</string>
 </resources>

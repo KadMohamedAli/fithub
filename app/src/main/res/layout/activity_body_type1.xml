@@ -20,7 +20,7 @@ android:background="@color/noir_fonce">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10sp"
-        android:layout_marginBottom="150sp"
+        android:layout_marginBottom="100sp"
         android:gravity="center"
         android:text="@string/build_your_perfect_body"
         android:textColor="@color/white"
@@ -33,7 +33,7 @@ android:background="@color/noir_fonce">
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginEnd="50sp"
-        android:layout_marginBottom="10sp">
+        >
 
         <TextView
             android:fontFamily="@font/ms_reference_sans_serif"
@@ -45,51 +45,115 @@ android:background="@color/noir_fonce">
             android:textStyle="bold"
             android:layout_marginBottom="25sp"/>
 
-        <Button
+        <LinearLayout
+            android:paddingVertical="10sp"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="@string/ectomorph"
-            android:textStyle="bold"
-            android:gravity="start|center_vertical"
-            android:fontFamily="@font/ms_reference_sans_serif"
-            android:backgroundTint="@color/faded_white"
-            android:id="@+id/ectomorph"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/mesomorph"
-            android:textStyle="bold"
-            android:gravity="start|center_vertical"
-            android:fontFamily="@font/ms_reference_sans_serif"
-            android:backgroundTint="@color/faded_white"
-            android:id="@+id/mesomorph"
-            />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/background_for_layout"
+            android:layout_marginBottom="15sp"
+            >
+            <Button
+                android:stateListAnimator="@null"
+                android:layout_marginHorizontal="10sp"
+                android:backgroundTint="@color/noir_moins_fonce"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:text="@string/ectomorph"
+                android:textStyle="bold"
+                android:gravity="start|center_vertical"
+                android:fontFamily="@font/ms_reference_sans_serif"
+                android:id="@+id/ectomorph"
+                />
+            <TextView
+                android:paddingHorizontal="15sp"
+                android:fontFamily="@font/ms_reference_sans_serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ectomorph_bio"
+                android:textColor="@color/grey"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
 
-        <Button
+        <LinearLayout
+            android:paddingVertical="10sp"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/endomorph"
-            android:textStyle="bold"
-            android:gravity="start|center_vertical"
-            android:fontFamily="@font/ms_reference_sans_serif"
-            android:backgroundTint="@color/faded_white"
-            android:id="@+id/endomorph"
-            />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/background_for_layout"
+            android:layout_marginBottom="15sp"
+            >
+            <Button
+                android:stateListAnimator="@null"
+                android:layout_marginHorizontal="10sp"
+                android:backgroundTint="@color/noir_moins_fonce"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:text="@string/mesomorph"
+                android:textStyle="bold"
+                android:gravity="start|center_vertical"
+                android:fontFamily="@font/ms_reference_sans_serif"
+                android:id="@+id/mesomorph"
+                />
+            <TextView
+                android:paddingHorizontal="15sp"
+                android:fontFamily="@font/ms_reference_sans_serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mesomorph_bio"
+                android:textColor="@color/grey"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingVertical="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/background_for_layout"
+            android:layout_marginBottom="15sp"
+            >
+            <Button
+                android:stateListAnimator="@null"
+                android:layout_marginHorizontal="10sp"
+                android:backgroundTint="@color/noir_moins_fonce"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:text="@string/endomorph"
+                android:textStyle="bold"
+                android:gravity="start|center_vertical"
+                android:fontFamily="@font/ms_reference_sans_serif"
+                android:id="@+id/endomorph"
+                />
+            <TextView
+                android:paddingHorizontal="15sp"
+                android:fontFamily="@font/ms_reference_sans_serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/endomorph_bio"
+                android:textColor="@color/grey"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+
 
     </LinearLayout>
 
     <ImageButton
+        android:id="@+id/infoImageBoutton"
         android:layout_width="65dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="40dp"
         android:layout_marginStart="10dp"
-        android:id="@+id/infoImageBoutton"
-        android:src="@drawable/ic_baseline_info_24"
-        android:scaleType="fitXY"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="@color/noir_fonce"
-        />
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_info_24"
+        tools:ignore="SpeakableTextPresentCheck"/>
 </LinearLayout>
 </ScrollView>
