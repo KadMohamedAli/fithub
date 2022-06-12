@@ -1,97 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DiseaseActivity"
     android:background="@color/noir_fonce">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15sp">
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="200dp"
-        android:id="@+id/heartDiseaseButton"
-        android:backgroundTint="@color/noir_moins_fonce"
-        android:text="@string/heart_disease"
-        android:textSize="14sp"
-        android:fontFamily="@font/ms_reference_sans_serif"
-        android:gravity="start|center_vertical"
-        android:paddingStart="15dp"
-        />
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="@id/heartDiseaseButton"
-        app:layout_constraintTop_toBottomOf="@id/heartDiseaseButton"
-        android:layout_marginTop="10dp"
-        android:id="@+id/severeScoliosis"
-        android:backgroundTint="@color/noir_moins_fonce"
-        android:text="@string/severe_scoliosis"
-        android:textSize="14sp"
-        android:fontFamily="@font/ms_reference_sans_serif"
-        android:gravity="start|center_vertical"
-        android:paddingStart="15dp"
-        />
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="@id/heartDiseaseButton"
-        app:layout_constraintTop_toBottomOf="@id/severeScoliosis"
-        android:layout_marginTop="10dp"
-        android:id="@+id/spinalDamage"
-        android:backgroundTint="@color/noir_moins_fonce"
-        android:text="@string/spinal_damage"
-        android:textSize="14sp"
-        android:fontFamily="@font/ms_reference_sans_serif"
-        android:gravity="start|center_vertical"
-        android:paddingStart="15dp"
-        />
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="@id/heartDiseaseButton"
-        app:layout_constraintTop_toBottomOf="@id/spinalDamage"
-        android:layout_marginTop="10dp"
-        android:id="@+id/tumor"
-        android:backgroundTint="@color/noir_moins_fonce"
-        android:text="@string/benign_or_malignant_tumor"
-        android:textSize="14sp"
-        android:fontFamily="@font/ms_reference_sans_serif"
-        android:gravity="start|center_vertical"
-        android:paddingStart="15dp"
-        />
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="@id/heartDiseaseButton"
-        app:layout_constraintTop_toBottomOf="@id/tumor"
-        android:layout_marginTop="10dp"
-        android:id="@+id/hypertention"
-        android:backgroundTint="@color/noir_moins_fonce"
-        android:text="@string/hypertention"
-        android:textSize="14sp"
-        android:fontFamily="@font/ms_reference_sans_serif"
-        android:gravity="start|center_vertical"
-        android:paddingStart="15dp"
-        />
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:layout_marginBottom="40sp"
+            android:gravity="center"
+            android:text="@string/can_we_know_you_king"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="240dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_for_layout"
+            android:orientation="vertical"
+            android:paddingHorizontal="35sp"
+            android:paddingVertical="20sp"
+            android:layout_marginBottom="10sp"
+            >
 
-    <Button
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:id="@+id/continuerDisease"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/continue1"
-        android:textSize="12sp"
-        android:fontFamily="@font/ms_reference_sans_serif"
-        />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/do_you_have_any_of_the_following_conditions"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="101dp"
+                tools:layout_editor_absoluteY="165dp"
+                android:layout_marginBottom="25sp"/>
 
+            <CheckBox
+                android:id="@+id/heartDiseaseButton"
+                android:background="@color/faded_white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/heart_disease"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="15sp"
+                >
+            </CheckBox>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <CheckBox
+                android:id="@+id/severeScoliosis"
+                android:background="@color/faded_white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/severe_scoliosis"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="15sp"
+                >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/spinalDamage"
+                android:background="@color/faded_white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/spinal_damage"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="15sp"
+                >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/tumor"
+                android:background="@color/faded_white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/benign_or_malignant_tumor"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="15sp"
+                >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/hypertention"
+                android:background="@color/faded_white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/hypertention"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="15sp">
+            </CheckBox>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/continuerDisease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/continue_button"
+            android:layout_marginTop="10sp"
+            android:padding="15sp"
+            android:fontFamily="@font/ms_reference_sans_serif">
+        </Button>
+
+    </LinearLayout>
+</ScrollView>

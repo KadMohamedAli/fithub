@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">fithub</string>
     <string name="get_started">GET STARTED</string>
-    <string name="choose_your_goal">CHOOSE YOUR GOAL</string>
+    <string name="choose_your_goal">Choose Your Goal</string>
     <string name="lose_weight">Lose Weight</string>
     <string name="get_shredded">Get shredded</string>
     <string name="gain_muscle_mass">Gain Muscle Mass</string>
-    <string name="choose_the_body_you_want">CHOOSE THE BODY YOU WANT</string>
+    <string name="choose_the_body_you_want">Choose The Body You Want</string>
     <string name="athlete">Athlete</string>
     <string name="hero">Hero</string>
     <string name="bodybuilder">Bodybuilder</string>
@@ -36,4 +36,72 @@
     <string name="title_notifications">Notifications</string>
     <string name="planner">Planner</string>
     <string name="about_me">About me</string>
+
+    <string name="can_we_know_you_king">CAN WE KNOW YOU KING</string>
+    <string name="calorie_calculator">CALORIE CALCULATOR</string>
+
+    <string name="whats_your_date_of_birth">What\'s your date of birth?</string>
+    <string name="day_month_year">Day/Month/Year</string>
+    <string name="dd_mm_yy">YYYY-MM-DD</string>
+
+
+    <string name="what_should_we_call_you">What should we call you?</string>
+    <string name="your_name">Your Name</string>
+    <string name="name">Name</string>
+
+    <string name="whats_your_height">What\'s your height?</string>
+
+    <string name="continue_button">CONTINUE</string>
+
+
+    <string name="units">Units</string>
+    <string name="feets_inches">ft, in</string>
+    <string name="centimeters">cm</string>
+    <string name="kilograms">kg</string>
+    <string name="pounds">lb</string>
+
+    <string name="height_cm">Height (cm)</string>
+    <string name="height_ft">Height (ft)</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="weight_lb">Height (lb)</string>
+
+    <string name="___cm">___cm</string>
+    <string name="___ft">___ft</string>
+    <string name="___kg">___kg</string>
+    <string name="___lb">___lb</string>
+
+    <string name="target_weight_kg">Target weight (kg)</string>
+    <string name="target_weight_lb">Target weight (lb)</string>
+    <string name="current_weight_kg">Current weight (kg)</string>
+    <string name="current_weight_lb">Current weight (lb)</string>
+
+    <string name="choose_your_current_level_of_fitness_to_align_the_workout_plan_with">Choose your current level of fitness to align the workout plan with.</string>
+    <string name="what_s_your_level_of_fitness">What\'s your level of fitness?</string>
+
+    <string name="what_s_your_current_and_target_weight">What\'s your current and target weight?</string>
+    <string name="scroll_view_1">1</string>
+    <string name="scroll_view_10">10</string>
+    <string name="activity_level">Activity Level</string>
+    <string name="worst_shape">Worst shape</string>
+    <string name="i_m_on_fire">i\'m on fire</string>
+    <string name="heart_disease">Heart disease</string>
+    <string name="do_you_have_any_of_the_following_conditions">Do you have any of the following conditions?</string>
+    <string name="severe_scoliosis">Severe scoliosis</string>
+    <string name="spinal_damage">Spinal damage</string>
+    <string name="benign_or_malignant_tumor">Benign or malignant tumor</string>
+    <string name="hypertention">Hypertention</string>
+    <string name="none_of_the_above">None of the above</string>
+    <string name="your_goal_is_to_achieve_a_shreded_body_in_6_months">Your goal is to achieve a shreded body in 6 months</string>
+    <string name="obese">Obese</string>
+    <string name="normal">Normal</string>
+    <string name="underweight">Underweight</string>
+    <string name="current_bmi">Current BMI</string>
+    <string name="suggested_calories">Suggested Calories</string>
+    <string name="carbs">Carbs</string>
+    <string name="fat">Fat</string>
+    <string name="protein">Protein</string>
+    <string name="daily_calorie_norm">Daily calorie norm</string>
+    <string name="daily_water_minimum">Daily water minimum</string>
+    <string name="build_your_perfect_body">BUILD YOUR PERFECT BODY</string>
+    <string name="choose_your_body_type">Choose Your Body Type</string>
 </resources>
