@@ -8,24 +8,29 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.fithub.databinding.FragmentNotificationsBinding;
+import com.example.fithub.R;
+import com.example.fithub.databinding.FragmentAboutmeBinding;
+import com.example.fithub.goal_calorie;
 
 public class AboutmeFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentAboutmeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         AboutmeViewModel aboutmeViewModel =
                 new ViewModelProvider(this).get(AboutmeViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentAboutmeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        aboutmeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        FragmentTransaction ft = getChildFragmentManager().beginTransaction();
+        ft.replace(R.id.placeholder2, new goal_calorie());
+        ft.commit();
+
         return root;
     }
 

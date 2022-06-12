@@ -10,18 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.fithub.databinding.FragmentDashboardBinding;
+import com.example.fithub.databinding.FragmentPlannerBinding;
 
 public class PlannerFragment extends Fragment {
 
-    private FragmentDashboardBinding binding;
+    private FragmentPlannerBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         PlannerViewModel plannerViewModel =
                 new ViewModelProvider(this).get(PlannerViewModel.class);
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+        binding = FragmentPlannerBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textDashboard;

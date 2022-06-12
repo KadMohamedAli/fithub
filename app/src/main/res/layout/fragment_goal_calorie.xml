@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    tools:context=".goal_calorie"
+    android:background="@color/noir_fonce">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15sp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_for_layout"
+                android:orientation="vertical"
+                android:paddingHorizontal="35sp"
+                android:paddingVertical="20sp"
+                android:layout_marginBottom="10sp"
+                >
+
+                <TextView
+                    android:id="@+id/goalTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/ms_reference_sans_serif"
+                    tools:layout_editor_absoluteX="101dp"
+                    tools:layout_editor_absoluteY="165dp"
+                    android:layout_marginBottom="25sp"/>
+
+                <LinearLayout
+                    android:padding="15sp"
+                    android:background="@color/faded_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="15sp">
+
+                    <TextView
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/current_bmi"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="5sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:id="@+id/textViewBMI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="6sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:id="@+id/weightCommentaire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="15sp"
+                        android:textColor="@color/white">
+
+                    </TextView>
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderBMI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/activity_level"
+                        android:clickable="false"
+                        android:valueFrom="0"
+                        android:valueTo="50"
+                        app:thumbColor="@color/couleur3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:trackColor="@color/noir_moins_fonce" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="12sp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/underweight"
+                            android:gravity="start"
+                            android:textSize="12sp"
+                            android:textColor="@color/grey">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/normal"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/grey">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/obese"
+                            android:textSize="12sp"
+                            android:gravity="end"
+                            android:textColor="@color/grey">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/faded_white"
+                    android:padding="15sp"
+                    android:layout_marginBottom="15sp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/daily_calorie_norm"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="5sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dailyCalorie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="5sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/faded_white"
+                    android:padding="15sp"
+                    android:layout_marginBottom="15sp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/daily_water_minimum"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="5sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dailyWater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="5sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <GridLayout
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    app:layout_constraintStart_toStartOf="@id/goalTextView"
+                    app:layout_constraintTop_toBottomOf="@id/dailyWater"
+                    android:rowCount="2"
+                    android:columnCount="4"
+                    android:background="@color/noir_moins_fonce"
+                    >
+                    <TextView
+                        android:layout_width="144dp"
+                        android:layout_height="39dp"
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/noir_fonce"
+                        android:text="@string/suggested_calories"
+                        android:layout_column="0"
+                        android:layout_row="0"
+                        android:background="@color/couleur5"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginBottom="2dp"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="39dp"
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/noir_fonce"
+                        android:text="@string/carbs"
+                        android:layout_column="1"
+                        android:layout_row="0"
+                        android:background="@color/couleur5"
+                        android:layout_marginEnd="2dp"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="39dp"
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/noir_fonce"
+                        android:text="@string/fat"
+                        android:layout_column="2"
+                        android:layout_row="0"
+                        android:background="@color/couleur5"
+                        android:layout_marginEnd="2dp"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="39dp"
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/noir_fonce"
+                        android:text="@string/protein"
+                        android:layout_column="3"
+                        android:layout_row="0"
+                        android:background="@color/couleur5"
+                        />
+                    <TextView
+                        android:layout_width="144dp"
+                        android:layout_height="39dp"
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:textSize="12sp"
+                        android:textColor="@color/noir_fonce"
+                        android:id="@+id/calorieTable"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        android:background="@color/couleur5"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="39dp"
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:textSize="12sp"
+                        android:textColor="@color/noir_fonce"
+                        android:id="@+id/carbsTable"
+                        android:layout_column="1"
+                        android:layout_row="1"
+                        android:background="@color/couleur5"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="39dp"
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:textSize="12sp"
+                        android:textColor="@color/noir_fonce"
+                        android:id="@+id/fatTable"
+                        android:layout_column="2"
+                        android:layout_row="1"
+                        android:background="@color/couleur5"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="39dp"
+                        android:fontFamily="@font/ms_reference_sans_serif"
+                        android:textSize="12sp"
+                        android:textColor="@color/noir_fonce"
+                        android:id="@+id/proteinTable"
+                        android:layout_column="3"
+                        android:layout_row="1"
+                        android:background="@color/couleur5"
+                        />
+
+                </GridLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

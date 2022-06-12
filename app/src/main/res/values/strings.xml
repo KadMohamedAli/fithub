@@ -20,16 +20,6 @@
     <string name="slim_legs">SLIM LEGS</string>
     <string name="slim_arms">SLIM ARMS</string>
     <string name="beer_belly">BEER BELLY</string>
-    <string name="your_name">Your name</string>
-    <string name="heart_disease">HEART DISEASE</string>
-    <string name="severe_scoliosis">SEVERE SCOLIOSIS</string>
-    <string name="spinal_damage">SPINAL DAMAGE</string>
-    <string name="benign_or_malignant_tumor">BENIGN OR MALIGNANT TUMOR</string>
-    <string name="hypertention">HYPERTENTION</string>
-    <string name="suggested_calories">SUGGESTED CALORIES</string>
-    <string name="carbs">CARBS</string>
-    <string name="fat">FAT</string>
-    <string name="protein">PROTEIN</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -104,4 +94,6 @@
     <string name="daily_water_minimum">Daily water minimum</string>
     <string name="build_your_perfect_body">BUILD YOUR PERFECT BODY</string>
     <string name="choose_your_body_type">Choose Your Body Type</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
